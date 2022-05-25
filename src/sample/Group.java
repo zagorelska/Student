@@ -4,10 +4,9 @@ import java.util.*;
 
 public class Group {
     private String groupName;
-    //    private Student[] students = new Student[10];
-    private ArrayList<Student> students = new ArrayList<>();
+    private List<Student> students = new ArrayList<>(10);
 
-    public Group(String groupName, ArrayList<Student> students) {
+    public Group(String groupName, List<Student> students) {
         super();
         this.groupName = groupName;
         this.students = students;
@@ -21,7 +20,7 @@ public class Group {
         return groupName;
     }
 
-    public ArrayList<Student> getStudents() {
+    public List<Student> getStudents() {
         return students;
     }
 
@@ -29,7 +28,7 @@ public class Group {
         this.groupName = groupName;
     }
 
-    public void setStudents(ArrayList<Student> students) {
+    public void setStudents(List<Student> students) {
         this.students = students;
     }
 
@@ -70,7 +69,7 @@ public class Group {
         return false;
     }
 
-    public ArrayList<Student> sortStudentsByLastName() {
+    public List<Student> sortStudentsByLastName() {
         Collections.sort(students, Comparator.nullsLast(new StudentLastnameComparator()));
 
         return students;
