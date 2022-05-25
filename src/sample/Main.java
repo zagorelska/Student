@@ -39,6 +39,8 @@ public class Main {
             System.err.println(e.getMessage());
         }
 
+        System.out.println(group1);
+
         try {
             Student search = group1.searchStudentByLastName("Melenko");
             System.out.println(search.getLastName());
@@ -48,6 +50,8 @@ public class Main {
 
         group1.removeStudentByID(12345);
         group1.removeStudentByID(4);
+
+        System.out.println(group1);
 
         group1.sortStudentsByLastName();
         System.out.println(group1);
@@ -84,7 +88,6 @@ public class Main {
 
         File workFolder2 = new File("D:/Обучение/Java_OOP");
         File file2 = fileSt.findFileByGroupName(group1.getGroupName(), workFolder2);
-
 
     }
 }
